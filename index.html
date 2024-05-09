@@ -93,9 +93,10 @@ body {
 	<li style="color:rgb(109,121,172)">Lokatie: Radiologie, wachtgebied 5H</li>
     </ul>
   </li>
-</ul>
     
 <li id="metrostation">Dit is een station</li>
+
+</ul>
 	
 <script>
 var xhttp = new XMLHttpRequest();
@@ -110,7 +111,8 @@ xhttp.send();
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     document.getElementById("metrostation").innerHTML =
-    '<span class="caret">' + xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + '</span>';
+    '<span class="caret"><font size="+1"><b>' + xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + 
+    '</b></font><br><font color="blue">&nbsp &nbsp &nbsp ' + xmlDoc.getElementsByTagName("author")[0].childnodes[0].nodeValue + '</font></span>';
 }
 </script>
 	
