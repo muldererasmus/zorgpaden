@@ -115,6 +115,7 @@ function myFunction(xml) {
     + xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + '</font></span>';
 	
 const node = document.createElement("li");
+	node.setAttribute("class", "nested");
 const textnode = document.createTextNode("Water");
 node.appendChild(textnode);
 document.getElementById("metrostation").appendChild(node);
