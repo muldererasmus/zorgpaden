@@ -95,60 +95,25 @@ body {
   </li>
 </ul>
     
-    <div id='content'>
-	    <ul id='books'>
-		    <li>Author</li>
-		    <li>Title</li>
-		    <li>Price</li>
-		    <li>Description</li>
-	    </ul>
-	    
+<li id="metrostation">Dit is een station</li>
+	
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    myFunction(this);
+    }
+};
+xhttp.open("GET", "books.xml", true);
+xhttp.send();
 
-    </div>
-
-    <script>
-        let xmlContent = '';
-        let tableBooks = document.getElementById('books');
-        fetch('books.xml').then((response)=> {
-            response.text().then((xml)=>{
-                xmlContent = xml;
-
-                let parser = new DOMParser();
-                let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
-                let books = xmlDOM.querySelectorAll('book');
-
-                books.forEach(bookXmlNode => {
-
-                    let row = document.createElement('tr');
-
-                    //author
-                    let td = document.createElement('td');
-                    td.innerText = bookXmlNode.children[0].innerHTML;
-                    row.appendChild(td);
-
-                    //  title
-                    td = document.createElement('td');
-                    td.innerText = bookXmlNode.children[1].innerHTML;
-                    row.appendChild(td);
-                    
-                    //price
-                    td = document.createElement('td');
-                    td.innerText = '$ ' + bookXmlNode.children[3].innerHTML;
-                    row.appendChild(td);
-
-                    //description
-                    td = document.createElement('td');
-                    td.innerText = bookXmlNode.children[5].innerHTML;
-                    row.appendChild(td);
-
-                    tableBooks.children[1].appendChild(row);
-                    
-                });
-                
-            });
-        });    
-    </script>
-
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    document.getElementById("metrostation").innerHTML =
+    xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+}
+</script>
+	
     <script>
         var toggler = document.getElementsByClassName("caret");
         var i;
