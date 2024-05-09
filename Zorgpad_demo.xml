@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metromap>
+  <station>
+    <type>Behandeling</type>
+    <naam>Bloedafname</naam>
+    <omschrijving>
+		<wie>Laborant</wie>
+		<wat>
+			<tekst>Bloedonderzoek voorafgaand aan chemotherapie is nodig om te beoordelen of de chemotherapie veilig gegeven kan worden.
+			</tekst>
+			<movie></movie>
+			<link></link>
+		</wat>
+		<waar>Laboratorium, begane grond</waar>
+	<instructies>
+	</instructies>
+	</omschrijving>
+  </station>
+  
+  <station>
+    <type>Consult (gesprek met de patient)</type>
+    <naam>Consult poli</naam>
+    <omschrijving>
+		<wie>Oncoloog</wie>
+		<wat>
+			<tekst>Bij het eerste gesprek met je oncoloog wordt de diagnose met je besproken. Aan de hand van de diagnose wordt de behandeling met chemotherapie met je besproken: welke chemo ga je krijgen, hoe vaak en hoe veel en wat de meest voorkomende bijwerkingen zijn en wanneer je gaat beginnen. De oncoloog zal ook een lichamelijk onderzoek doen.
+			</tekst>
+			<movie>link adres</movie>
+			<link>link adres</link>
+		</wat>
+		<waar>Poli oncologie, wachtgebied 2H</waar>
+	<instructies>
+		<item>- vooraf bloed prikken</item>
+		<item>- vragenlijst invullen</item>
+	</instructies>
+	</omschrijving>
+  </station>
+</metromap>
