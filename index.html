@@ -94,7 +94,7 @@ body {
     </ul>
   </li>
     
-<li id="metro"><span class="caret">Dit is een station</span>>
+<li id="metrostation"><span class="caret">Dit is een station</span>>
 <ul class="nested"</ul>
 </li>
 
@@ -116,14 +116,14 @@ function myFunction(xml) {
     '<span class="caret"><font size="+1"><b>' + xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
     + xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + '</font></span>';
 	
-const node = document.createElement("ul");
-node.setAttribute("class", "nested");
+//const node = document.createElement("ul");
+//node.setAttribute("class", "nested");
 
-const item = document.createElement("li");
-const textnode = document.createTextNode("Water");
-item.appendChild(textnode);
-node.appendChild(item);
-document.getElementById("metrostation").appendChild(node);	
+//const item = document.createElement("li");
+//const textnode = document.createTextNode("Water");
+//item.appendChild(textnode);
+//node.appendChild(item);
+//document.getElementById("metrostation").appendChild(node);	
 }
 </script>
 	
