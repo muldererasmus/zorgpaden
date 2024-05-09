@@ -112,9 +112,9 @@ xhttp.send();
 
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
-    document.getElementById("metrostation").innerHTML =
-    '<span class="caret"><font size="+1"><b>' + xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
-    + xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + '</font></span>';
+    document.getElementById("metrostation").childNodes[0].innerHTML =
+    '<font size="+1"><b>' + xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
+    + xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + '</font>';
 	
 //const node = document.createElement("ul");
 //node.setAttribute("class", "nested");
