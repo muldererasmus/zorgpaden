@@ -118,10 +118,6 @@ function myFunction(xml) {
    + xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
    + xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + '</font></span>';
 
-   // now add a listener to this element to make sure it is responding to mouse clicks
-   document.getElementById("metrostation").childNodes[0].addEventListener("click", function() {
-        this.parentElement.querySelector(".nested").classList.toggle("active");
-        this.classList.toggle("caret-down");
    }
 //const node = document.createElement("ul");
 //node.setAttribute("class", "nested");
@@ -131,6 +127,11 @@ function myFunction(xml) {
 //item.appendChild(textnode);
 //node.appendChild(item);
 //document.getElementById("metrostation").appendChild(node);	
+}
+// now add a listener to this element to make sure it is responding to mouse clicks
+document.getElementById("metrostation").childNodes[0].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
 }
 </script>
 	
