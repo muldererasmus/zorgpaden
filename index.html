@@ -124,8 +124,9 @@ xhttp.send();
 	
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
+   let main = document.getElementById("metrostation");
    // get first list item element and fill it with data from the XML file
-   document.getElementById("metrostation").innerHTML = '<span class="caret"><font size="+1"><b>' 
+   main.innerHTML = '<span class="caret"><font size="+1"><b>' 
    + xmlDoc.getElementsByTagName("naam")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
    + xmlDoc.getElementsByTagName("wie")[0].childNodes[0].nodeValue + '</font></span>';
 	
@@ -141,17 +142,17 @@ function myFunction(xml) {
    node.appendChild(li);
 	
    // the "instructie"
-   li = document.createElement("li");
-   li.innerText = xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue;
+   //li = document.createElement("li");
+   //li.innerText = xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue;
    node.appendChild(li);
 	
    // the "waar"
-   li = document.createElement("li");
-   li.innerText = xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
-   node.appendChild(li);
+   //li = document.createElement("li");
+   //li.innerText = xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
+   //node.appendChild(li);
 
    // finally add it to the main list node
-   document.getElementById("metrostation").appendChild(node);
+   main.appendChild(node);
    };
 </script>
 </body>
