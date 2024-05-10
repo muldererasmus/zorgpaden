@@ -95,10 +95,12 @@ body {
   </li>
 </ul>
 
-<ul id="myUL" class="metromap">
+<ul id="myUL", class="metromap">
 	<li id="metrostation">Dit is een station
-		<ul class="nested"</ul>
-</li>
+		<ul class="nested">
+			
+		</ul>
+	</li>
 
 </ul>
 	
@@ -124,7 +126,7 @@ function myFunction(xml) {
    metrostation.childNodes[0].getElementByClassName("caret").addEventListener("click", function() {
         this.parentElement.querySelector(".nested").classList.toggle("active");
         this.classList.toggle("caret-down");
-   };
+   }
 //const node = document.createElement("ul");
 //node.setAttribute("class", "nested");
 
