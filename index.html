@@ -144,7 +144,12 @@ function myFunction(xml) {
    li.document.createElement("li");
    li.innerText = xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue;
    node.appendChild(li);
-   //const instructie = document.createElement("li");
+   // the "waar"
+   li.document.createElement("li");
+   li.innerText = xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
+   node.appendChild(li);
+
+//const instructie = document.createElement("li");
    //const textnode2 = document.createTextNode(xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue);
    //instructie.appendChild(textnode2);
    //node.appendChild(instructie);
