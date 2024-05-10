@@ -128,51 +128,31 @@ function myFunction(xml) {
    document.getElementById("metrostation").innerHTML = '<span class="caret"><font size="+1"><b>' 
    + xmlDoc.getElementsByTagName("naam")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
    + xmlDoc.getElementsByTagName("wie")[0].childNodes[0].nodeValue + '</font></span>';
+	
    // create nested ul so it can expand on a mouse click
    let node = document.createElement("ul");
    node.setAttribute("class", "nested");
+	
    // add content to the nested ul
-   //const wat = document.createElement("li");
-   //const textnode = document.createTextNode(xmlDoc.getElementsByTagName("wat")[0].childNodes[0].nodeValue);
-   //wat.appendChild(textnode);
-   //node.appendChild(wat);
    let li = document.createElement("li");
+	
    // the "wat"
    li.innerText = xmlDoc.getElementsByTagName("wat")[0].childNodes[0].nodeValue;
    node.appendChild(li);
+	
    // the "instructie"
-   li.document.createElement("li");
+   li = document.createElement("li");
    li.innerText = xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue;
    node.appendChild(li);
+	
    // the "waar"
-   li.document.createElement("li");
+   li = document.createElement("li");
    li.innerText = xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
    node.appendChild(li);
 
-//const instructie = document.createElement("li");
-   //const textnode2 = document.createTextNode(xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue);
-   //instructie.appendChild(textnode2);
-   //node.appendChild(instructie);
    // finally add it to the main list node
    document.getElementById("metrostation").appendChild(node);
    };
-//const node = document.createElement("ul");
-//node.setAttribute("class", "nested");
-
-//const item = document.createElement("li");
-//const textnode = document.createTextNode("Water");
-//item.appendChild(textnode);
-//node.appendChild(item);
-//document.getElementById("metrostation").appendChild(node);	
-//}
-// now add a listener to this element to make sure it is responding to mouse clicks
-//document.getElementById("metrostation").childNodes[0].addEventListener("click", function() {
-//        this.parentElement.querySelector(".nested").classList.toggle("active");
-//        this.classList.toggle("caret-down");
-//}
-
-	
- 
-    </script>
+</script>
 </body>
 </html>
