@@ -132,14 +132,14 @@ function myFunction(xml) {
    const node = document.createElement("ul");
    node.setAttribute("class", "nested");
    // add content to the nested ul
-   const item = document.createElement("li");
+   const wat = document.createElement("li");
    const textnode = document.createTextNode(xmlDoc.getElementsByTagName("wat")[0].childNodes[0].nodeValue);
-   item.appendChild(textnode);
-   node.appendChild(item);
-   //item = document.createElement("li");
-   //textnode = document.createTextNode(xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue);
-   //item.appendChild(textnode);
-   //node.appendChild(item);
+   wat.appendChild(textnode);
+   node.appendChild(wat);
+   const instructie = document.createElement("li");
+   const textnode2 = document.createTextNode(xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue);
+   instructie.appendChild(textnode2);
+   node.appendChild(instructie);
    // finally add it to the main list node
    document.getElementById("metrostation").appendChild(node);
    };
