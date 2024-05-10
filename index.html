@@ -145,11 +145,13 @@ function myFunction(xml) {
    // the "instructie"
    li = document.createElement("li");
    li.innerText = xmlDoc.getElementsByTagName("instructies")[0].childNodes[0].nodeValue;
+   li.setAttribute("style", "color:rgb(117,140,241)");
    node.appendChild(li);
 	
    // the "waar"
    li = document.createElement("li");
-   li.innerText = xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
+   li.innerText = 'Lokatie: ' + xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
+   li.setAttribute("style", "color:rgb(109,121,172)");	
    node.appendChild(li);
 
    // finally add it to the main list node
