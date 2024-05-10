@@ -139,12 +139,12 @@ function myFunction(xml) {
 	
    // the "wat"
    li.innerText = xmlDoc.getElementsByTagName("wat")[0].childNodes[0].nodeValue;
+   li.setAttribute("style", "color:rgb(134,210,237)");
    node.appendChild(li);
 	
    // the "instructie"
    li = document.createElement("li");
-   li.innerText = "Test";
-   //li.innerText = xmlDoc.getElementsByTagName("instructie")[0].childNodes[0].nodeValue;
+   li.innerText = xmlDoc.getElementsByTagName("instructies")[0].childNodes[0].nodeValue;
    node.appendChild(li);
 	
    // the "waar"
