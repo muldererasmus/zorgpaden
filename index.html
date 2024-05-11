@@ -96,9 +96,10 @@ body {
 </ul>
 
 <ul id="myUL", class="metromap">
-	<li id="metrostation">Dit is een station
+<!--	<li id="metrostation">Dit is een station
 		<ul class="nested"></ul>
 	</li>
+-->
 </ul>
 	
 <script>
@@ -124,7 +125,12 @@ xhttp.send();
 	
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
-   let main = document.getElementById("metrostation");
+   let metromap = document.getElementByClass("metromap");
+
+	
+   //let main = document.getElementById("metrostation");
+   let main = document.createElement("li");
+   main.setAttribute("id", "metrostation");
    // get first list item element and fill it with data from the XML file
    main.innerHTML = '<span class="caret"><font size="+1"><b>' 
    + xmlDoc.getElementsByTagName("naam")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
