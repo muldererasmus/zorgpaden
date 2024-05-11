@@ -124,7 +124,7 @@ xhttp.open("GET", "Zorgpad_demo.xml", true);
 xhttp.send();
 	
 function myFunction(xml) {
-    var xmlDoc = xml.responseXML;
+   var xmlDoc = xml.responseXML;
    let metromap = document.getElementByClass("metromap");
 
 	
@@ -160,8 +160,11 @@ function myFunction(xml) {
    li.setAttribute("style", "color:rgb(109,121,172)");	
    node.appendChild(li);
 
-   // finally add it to the main list node
+   // add it to the main list node
    main.appendChild(node);
+
+   // finally add it to the metromap node
+   metromap.appendChild(main);
    };
 </script>
 </body>
