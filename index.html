@@ -126,12 +126,12 @@ xhttp.send();
 function myFunction(xml) {
    //get the xml doc call response
    var xmlDoc = xml.responseXML;
-   
+   var stations = xmlDoc.getElementsByTagName("station");
    // get the metromap ul
-   let metromap = document.getElementsByClassName("station");
+   let metromap = document.getElementsByClassName("metromap");
 
   	// cycle through all stations to add them to the html code
-	for (i = 0; i < metromap.length; i++) {
+	for (i = 0; i < stations.length; i++) {
  
 		// create the first li item 
    		let main = document.createElement("li");
