@@ -72,7 +72,7 @@ body {
 	  <font color="blue">&nbsp &nbsp &nbsp Oncoloog</font></span>
     <ul class="nested">
       	<li style="color:rgb(134,210,237)">Bij het eerste gesprek met je oncoloog wordt de diagnose met je besproken. Aan de hand van de diagnose wordt de behandeling met chemotherapie met je besproken: welke chemo ga je krijgen, hoe vaak en hoe veel en wat de meest voorkomende bijwerkingen zijn en wanneer je gaat beginnen. De oncoloog zal ook een lichamelijk onderzoek doen.
-	<button type="button">Click Me!</button>
+	<button type="button">Lees voor!</button>
 	</li>
 	  <li style="color:rgb(117,140,241)">- vooraf bloed prikken</li>
 	  <li style="color:rgb(117,140,241)">- vooraf vragenlijst invullen</li>
@@ -177,6 +177,68 @@ function myFunction(xml) {
 	}
    	
 };
+</script>
+
+</script>
+// text to speech script
+
+const textarea = document.querySelector("textarea"),
+voiceList = document.querySelector("select"),
+speechBtn = document.querySelector("button");
+
+let synth = speechSynthesis,
+isSpeaking = true;
+
+voices();
+
+function voices(){
+    for(let voice of synth.getVoices()){
+        let selected = voice.name === "Google US English" ? "selected" : "";
+        let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
+        voiceList.insertAdjacentHTML("beforeend", option);
+    }
+}
+
+synth.addEventListener("voiceschanged", voices);
+
+function textToSpeech(text){
+    let utterance = new SpeechSynthesisUtterance(text);
+    for(let voice of synth.getVoices()){
+        if(voice.name === voiceList.value){
+            utterance.voice = voice;
+        }
+    }
+    synth.speak(utterance);
+}
+
+speechBtn.addEventListener("click", e =>{
+    e.preventDefault();
+    if(textarea.value !== ""){
+        if(!synth.speaking){
+            textToSpeech(textarea.value);
+        }
+        if(textarea.value.length > 80){
+            setInterval(()=>{
+                if(!synth.speaking && !isSpeaking){
+                    isSpeaking = true;
+                    speechBtn.innerText = "Lees voor!";
+                }else{
+                }
+            }, 500);
+            if(isSpeaking){
+                synth.resume();
+                isSpeaking = false;
+                speechBtn.innerText = "Pause Speech";
+            }else{
+                synth.pause();
+                isSpeaking = true;
+                speechBtn.innerText = "Resume Speech";
+            }
+        }else{
+            speechBtn.innerText = "Lees voor!";
+        }
+    }
+});
 </script>
 </body>
 </html>
