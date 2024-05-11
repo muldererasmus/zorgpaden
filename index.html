@@ -125,7 +125,7 @@ xhttp.send();
 	
 function myFunction(xml) {
    var xmlDoc = xml.responseXML;
-   let metromap = document.getElementByClassName("metromap");
+   let metromap = document.getElementsByClassName("metromap");
 
 	
    //let main = document.getElementById("metrostation");
@@ -164,7 +164,7 @@ function myFunction(xml) {
    main.appendChild(node);
 
    // finally add it to the metromap node
-   metromap.appendChild(main);
+   metromap[0].appendChild(main);
    };
 </script>
 </body>
