@@ -124,48 +124,53 @@ xhttp.open("GET", "Zorgpad_demo.xml", true);
 xhttp.send();
 	
 function myFunction(xml) {
+   //get the xml doc call response
    var xmlDoc = xml.responseXML;
-   let metromap = document.getElementsByClassName("metromap");
+   
+   // get the metromap ul
+   let metromap = document.getElementsByClassName("station");
 
+  	// cycle through all stations to add them to the html code
+	for (i = 0; i < metromap.length; i++) {
+ 
+		// create the first li item 
+   		let main = document.createElement("li");
+   		main.setAttribute("id", "metrostation");
+   		// get first list item element and fill it with data from the XML file
+   		main.innerHTML = '<span class="caret"><font size="+1"><b>' 
+   		+ xmlDoc.getElementsByTagName("naam")[i].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
+   		+ xmlDoc.getElementsByTagName("wie")[i].childNodes[0].nodeValue + '</font></span>';
 	
-   //let main = document.getElementById("metrostation");
-   let main = document.createElement("li");
-   main.setAttribute("id", "metrostation");
-   // get first list item element and fill it with data from the XML file
-   main.innerHTML = '<span class="caret"><font size="+1"><b>' 
-   + xmlDoc.getElementsByTagName("naam")[0].childNodes[0].nodeValue + '</b></font><br><font color="blue">&nbsp &nbsp &nbsp'
-   + xmlDoc.getElementsByTagName("wie")[0].childNodes[0].nodeValue + '</font></span>';
+   		// create nested ul so it can expand on a mouse click
+   		let node = document.createElement("ul");
+   		node.setAttribute("class", "nested");
 	
-   // create nested ul so it can expand on a mouse click
-   let node = document.createElement("ul");
-   node.setAttribute("class", "nested");
+   		// add content to the nested ul
+   		let li = document.createElement("li");
 	
-   // add content to the nested ul
-   let li = document.createElement("li");
+   		// the "wat"
+   		li.innerText = xmlDoc.getElementsByTagName("wat")[i].childNodes[0].nodeValue;
+   		li.setAttribute("style", "color:rgb(134,210,237)");
+   		node.appendChild(li);
 	
-   // the "wat"
-   li.innerText = xmlDoc.getElementsByTagName("wat")[0].childNodes[0].nodeValue;
-   li.setAttribute("style", "color:rgb(134,210,237)");
-   node.appendChild(li);
+   		// the "instructie"
+   		li = document.createElement("li");
+   		li.innerText = xmlDoc.getElementsByTagName("instructies")[i].childNodes[0].nodeValue;
+   		li.setAttribute("style", "color:rgb(117,140,241)");
+   		node.appendChild(li);
 	
-   // the "instructie"
-   li = document.createElement("li");
-   li.innerText = xmlDoc.getElementsByTagName("instructies")[0].childNodes[0].nodeValue;
-   li.setAttribute("style", "color:rgb(117,140,241)");
-   node.appendChild(li);
-	
-   // the "waar"
-   li = document.createElement("li");
-   li.innerText = 'Lokatie: ' + xmlDoc.getElementsByTagName("waar")[0].childNodes[0].nodeValue;
-   li.setAttribute("style", "color:rgb(109,121,172)");	
-   node.appendChild(li);
+   		// the "waar"
+   		li = document.createElement("li");
+   		li.innerText = 'Lokatie: ' + xmlDoc.getElementsByTagName("waar")[i].childNodes[0].nodeValue;
+   		li.setAttribute("style", "color:rgb(109,121,172)");	
+   		node.appendChild(li);
 
-   // add it to the main list node
-   main.appendChild(node);
-
-   // finally add it to the metromap node
-   metromap[0].appendChild(main);
-   };
+   		// add it to the main list node
+   		main.appendChild(node);
+	}
+   	// finally add it to the metromap node
+   	metromap[0].appendChild(main);
+};
 </script>
 </body>
 </html>
