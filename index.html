@@ -218,7 +218,7 @@ speechBtn.addEventListener("click", e =>{
     e.preventDefault();
     if(textarea.innerText !== ""){
         if(!synth.speaking){
-            textToSpeech("ik spreek een tekst uit");
+            textToSpeech(textarea.innerText);
         }
 		
 /*
