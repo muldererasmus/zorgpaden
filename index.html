@@ -182,7 +182,7 @@ function myFunction(xml) {
 <script>
 // text to speech script
 
-const textarea = document.querySelector("voorleestekst"),
+const textarea = document.getElementsByClassName("voorleestekst"),
 voiceList = document.querySelector("select"),
 speechBtn = document.querySelector("button");
 
@@ -213,11 +213,11 @@ function textToSpeech(text){
 
 speechBtn.addEventListener("click", e =>{
     e.preventDefault();
-    if(textarea.value !== ""){
+    if(textarea.innerText !== ""){
         if(!synth.speaking){
-            textToSpeech(textarea.value);
+            textToSpeech(textarea.innerText);
         }
-        if(textarea.value.length > 80){
+        if(textarea.innerText.length > 80){
             setInterval(()=>{
                 if(!synth.speaking && !isSpeaking){
                     isSpeaking = true;
