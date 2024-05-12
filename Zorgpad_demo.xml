@@ -10,29 +10,29 @@
   </station>
   
   <station>
-    <type>Consult (gesprek met de patient)</type>
-    <naam>Consult poli</naam>
-    <wat>Bij het eerste gesprek met je oncoloog wordt de diagnose met je besproken. Aan de hand van de diagnose wordt de behandeling met chemotherapie met je besproken: welke chemo ga je krijgen, hoe vaak en hoe veel en wat de meest voorkomende bijwerkingen zijn en wanneer je gaat beginnen. De oncoloog zal ook een lichamelijk onderzoek doen.</wat>
-    <wie>Oncoloog</wie>
-    <waar>Poli oncologie, wachtgebied 2H</waar>
-    <instructies>- Vooraf bloed prikken</instructies>
+    <type>Behandeling</type>
+    <naam>Hartfilmpje</naam>
+    <wat>Voorafgaand aan de start van bepaalde chemotherapie wordt een hartfilmpje (ECG) gemaakt om te beoordelen of uw hart goed werkt om de chemo veilig te kunnen geven.</wat>
+    <wie>Laborant cardiologie</wie>
+    <waar>Poli cadriologie, wachtgebied 2F</waar>
+    <instructies>- Gebruik hart-medicatie melden</instructies>
   </station>
 
     <station>
     <type>Consult (gesprek met de patient)</type>
     <naam>Consult poli</naam>
-    <wat>Bij het eerste gesprek met je oncoloog wordt de diagnose met je besproken. Aan de hand van de diagnose wordt de behandeling met chemotherapie met je besproken: welke chemo ga je krijgen, hoe vaak en hoe veel en wat de meest voorkomende bijwerkingen zijn en wanneer je gaat beginnen. De oncoloog zal ook een lichamelijk onderzoek doen.</wat>
-    <wie>Oncoloog</wie>
-    <waar>Poli oncologie, wachtgebied 2H</waar>
-    <instructies>- Vooraf bloed prikken</instructies>
+    <wat>Voordat u start met de behandeling heeft u een afspraak met de oncologie verpleegkundige. Dit is een aanvullend voorlichtingsgesprek over de behandeling , het dagbehandelcentrum en praktische zaken zoals hoe en wanneer u contact met de afdeling oncologie kan nemen.</wat>
+    <wie>Oncologie verpleegkundige</wie>
+    <waar>Poli oncologie, wachtgebied 4H</waar>
+    <instructies>- Vooraf medicatie apotheek ophalen</instructies>
   </station>
 
     <station>
-    <type>Consult (gesprek met de patient)</type>
-    <naam>Consult poli</naam>
-    <wat>Bij het eerste gesprek met je oncoloog wordt de diagnose met je besproken. Aan de hand van de diagnose wordt de behandeling met chemotherapie met je besproken: welke chemo ga je krijgen, hoe vaak en hoe veel en wat de meest voorkomende bijwerkingen zijn en wanneer je gaat beginnen. De oncoloog zal ook een lichamelijk onderzoek doen.</wat>
-    <wie>Oncoloog</wie>
-    <waar>Poli oncologie, wachtgebied 2H</waar>
-    <instructies>- Vooraf bloed prikken</instructies>
+    <type>Behandeling</type>
+    <naam>Chemotherapie</naam>
+    <wat>Op de dagbehandeling oncologie krijgt u via een infuus de chemotherapie. </wat>
+    <wie>Verpleegkundige dagbehandeling</wie>
+    <waar>Dagbehandel centrum, wachtgebied 4H</waar>
+    <instructies>- Alleen bij 1e chemo met begeleiding</instructies>
   </station>
 </metromap>
