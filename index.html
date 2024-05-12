@@ -77,76 +77,76 @@ body {
 <p> </p>
 
 <ul id="myUL">
-  <li><span class="caret"><font size="+1">
-	  <b>Gesprek</b></font><br>
-	  <font color="blue">&nbsp &nbsp &nbsp Oncoloog</font></span>
-    <ul class="nested">
-      	<li style="color:rgb(134,210,237)" class="voorleestekst">Bij het eerste gesprek met je oncoloog worden de diagnose en behandeling met je besproken. Welke chemo ga je krijgen? Hoe vaak en hoe veel? En wat zijn de meest voorkomende bijwerkingen? De oncoloog zal ook een lichamelijk onderzoek doen.</li>
-	<button type="button">Lees voor!</button>
-	  <li style="color:rgb(117,140,241)">- vooraf bloed prikken</li>
-	  <li style="color:rgb(117,140,241)">- vooraf vragenlijst invullen</li>
-	  <li style="color:rgb(109,121,172)">Lokatie: Poli oncologie, wachtgebied 2K</li>
-    </ul>
-  </li>
-
-  <li><span class="caret"><font size="+1"><b>CT-scan</b></font><br><font color="blue">&nbsp &nbsp &nbsp Radioloog</font></span>
-    <ul class="nested">
-	    <div id="google_translate_element"></div>
-	<div id="parts" class="translate" style="padding-top: 8px;">
-      <li style="color:rgb(134,210,237)">Bij een FDG-PET-scan wordt een speciale scanner en een speciaal radioactief suiker gebruikt. Dit onderzoek wordt vooral gebruikt om eventuele uitzaaiingen op te sporen.</li>
-	  <li style="color:rgb(117,140,241)">- Niet eten 4 uur voor onderzoek</li>
-	  <li style="color:rgb(117,140,241)">- Met volle blaas komen</li>
-	  <li style="color:rgb(109,121,172)">Lokatie: Radiologie, wachtgebied 5H</li>
-	</div>
-    </ul>
-  </li>
-
-  <li><span class="caret"><font size="+1"><b>Mammografie</b></font><br><font color="blue">&nbsp &nbsp &nbsp Radioloog</font></span>
-    <ul class="nested">
-	<li>
-		<iframe width="300" height="168" src="https://www.youtube.com/embed/WJKhehpFxow" title="What to Expect During Your First Mammogram" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		
+	<li><span class="caret"><font size="+1"><b>Mammografie</b></font><br><font color="blue">&nbsp &nbsp &nbsp Radioloog</font></span>
+    	<ul class="nested">
+			<li>
+				<iframe width="300" height="168" src="https://www.youtube.com/embed/WJKhehpFxow" title="What to Expect During Your First Mammogram" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>		
+			</li>
+			<li style="color:rgb(109,121,172)">Lokatie: Radiologie, wachtgebied 5H</li>
+    	</ul>
+  	</li>  
+	
+  	<li><span class="caret"><font size="+1"><b>CT-scan</b></font><br><font color="blue">&nbsp &nbsp &nbsp Radioloog</font></span>
+    	<ul class="nested">
+			<div id="google_translate_element"></div>
+			<div id="parts" class="translate" style="padding-top: 8px;">
+      		<li style="color:rgb(134,210,237)">Bij een FDG-PET-scan wordt een speciale scanner en een speciaal radioactief suiker gebruikt. Dit onderzoek wordt vooral gebruikt om eventuele uitzaaiingen op te sporen.</li>
+	  		<li style="color:rgb(117,140,241)">- Niet eten 4 uur voor onderzoek</li>
+	  		<li style="color:rgb(117,140,241)">- Met volle blaas komen</li>
+	  		<li style="color:rgb(109,121,172)">Lokatie: Radiologie, wachtgebied 5H</li>
+			</div>
+    	</ul>
 	</li>
-	<li style="color:rgb(109,121,172)">Lokatie: Radiologie, wachtgebied 5H</li>
-    </ul>
-  </li>
+	
+	<li><span class="caret"><font size="+1">
+	  	<b>Gesprek</b></font><br>
+	  	<font color="blue">&nbsp &nbsp &nbsp Oncoloog</font></span>
+    	<ul class="nested">
+      		<li style="color:rgb(134,210,237)" class="voorleestekst">Bij het eerste gesprek met je oncoloog worden de diagnose en behandeling met je besproken. Welke chemo ga je krijgen? Hoe vaak en hoe veel? En wat zijn de meest voorkomende bijwerkingen? De oncoloog zal ook een lichamelijk onderzoek doen.</li>
+			<button type="button">Lees voor!</button>
+	  		<li style="color:rgb(117,140,241)">- vooraf bloed prikken</li>
+	  		<li style="color:rgb(117,140,241)">- vooraf vragenlijst invullen</li>
+	  		<li style="color:rgb(109,121,172)">Lokatie: Poli oncologie, wachtgebied 2K</li>
+    	</ul>
+  	</li>
 </ul>
 
+<!-- the metromap list that will be filled by the XML file>
 <ul id="myUL", class="metromap">
 
 </ul>
 	
 <script>
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    myFunction(this);
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		myFunction(this);
 
-var toggler = document.getElementsByClassName("caret");
-var i;
+			var toggler = document.getElementsByClassName("caret");
+			var i;
 
-for (i = 0; i < toggler.length; i++) {
-      toggler[i].addEventListener("click", function() {
-      this.parentElement.querySelector(".nested").classList.toggle("active");
-      this.classList.toggle("caret-down");
-      });
-}
-	    
-    }
-};
-xhttp.open("GET", "Zorgpad_demo.xml", true);
-xhttp.send();
+			for (i = 0; i < toggler.length; i++) {
+      			toggler[i].addEventListener("click", function() {
+      				this.parentElement.querySelector(".nested").classList.toggle("active");
+      				this.classList.toggle("caret-down");
+     	 		});
+			}
+    	}
+	};
+
+	xhttp.open("GET", "Zorgpad_demo.xml", true);
+	xhttp.send();
 	
-function myFunction(xml) {
-   //get the xml doc call response
-   var xmlDoc = xml.responseXML;
-   var stations = xmlDoc.getElementsByTagName("station");
-   // get the metromap ul
-   let metromap = document.getElementsByClassName("metromap");
+	function myFunction(xml) {
+   	//get the xml doc call response
+   	var xmlDoc = xml.responseXML;
+   	var stations = xmlDoc.getElementsByTagName("station");
+   	// get the metromap ul
+   	let metromap = document.getElementsByClassName("metromap");
 
   	// cycle through all stations to add them to the html code
 	for (i = 0; i < stations.length; i++) {
- 
-		// create the first li item 
+ 		// create the first li item 
    		let main = document.createElement("li");
    		main.setAttribute("id", "metrostation");
    		// get first list item element and fill it with data from the XML file
@@ -183,8 +183,7 @@ function myFunction(xml) {
 
 		// finally add it to the metromap node
    		metromap[0].appendChild(main);
-	}
-   	
+	} 	
 };
 </script>
 
@@ -210,22 +209,20 @@ speechBtn.addEventListener("click", e =>{
         if(!synth.speaking){
             textToSpeech(textarea[0].innerText);
         }
-		
-
     }
 });
 </script>
 
-	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>	
-	<script>
-		function googleTranslateElementInit() {
-new google.translate.TranslateElement({
-    pageLanguage: 'nl', includedLanguages: 'en,pl,ar,tr,pt,nl', autoDisplay: false, 
-	layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-			
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>	
 
+<script>
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({
+    	pageLanguage: 'nl', includedLanguages: 'en,pl,ar,tr,pt,nl', autoDisplay: false, 
+		layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  	}, 'google_translate_element');
 }
-	</script>
+</script>
+
 </body>
 </html>
