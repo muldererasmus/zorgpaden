@@ -206,9 +206,9 @@ function textToSpeech(text){
 
 speechBtn.addEventListener("click", e =>{
     e.preventDefault();
-    if(textarea[0].innerText !== ""){
+    if(textarea[0].nodeValue !== ""){
         if(!synth.speaking){
-            textToSpeech(textarea[0].innerText);
+            textToSpeech(textarea[0].nodeValue);
         }
 		
 
