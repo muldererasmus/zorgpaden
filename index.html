@@ -220,6 +220,9 @@ speechBtn.addEventListener("click", e =>{
         if(!synth.speaking){
             textToSpeech(textarea.innerText);
         }
+		
+/*
+	    
         if(textarea.innerText.length > 80){
             setInterval(()=>{
                 if(!synth.speaking && !isSpeaking){
@@ -240,6 +243,7 @@ speechBtn.addEventListener("click", e =>{
         }else{
             speechBtn.innerText = "Lees voor!";
         }
+	*/
     }
 });
 </script>
