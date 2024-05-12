@@ -203,7 +203,9 @@ isSpeaking = true;
 
 function textToSpeech(text){
     let utterance = new SpeechSynthesisUtterance(text);
-	utterance.voice = "Google US English" ? "selected" : "";
+	utterance.name = "Google Nederlands";
+	utterance.lang = "nl-NL";
+	//utterance.voice = "Google US English" ? "selected" : "";
    // for(let voice of synth.getVoices()){
    //     if(voice.name === voiceList.value){
     //        utterance.voice = voice;
