@@ -33,6 +33,115 @@
     <wat>Op de dagbehandeling oncologie krijgt u via een infuus de chemotherapie. </wat>
     <wie>Verpleegkundige dagbehandeling</wie>
     <waar>Dagbehandel centrum, wachtgebied 4H</waar>
-    <instructies>- Alleen bij 1e chemo met begeleiding</instructies>
+    <instructies>- 1e kuur dose dense adriamycine + cyclofosfamide</instructies>
   </station>
+
+    <station>
+    <type>Behandeling</type>
+    <naam>Bloedafname</naam>
+    <wat>Bloedonderzoek voorafgaand aan chemotherapie is nodig om te beoordelen of de chemotherapie veilig gegeven kan worden.</wat>
+    <wie>Laborant</wie>  
+    <waar>Laboratorium, begane grond</waar>
+    <instructies>- Nuchter</instructies>
+  </station>
+
+    <station>
+    <type>Consult (gesprek met de patient)</type>
+    <naam>Consult poli</naam>
+    <wat>Voorafgaand aan elke volgende chemotherapie heeft u een consult met de oncoloog of verpleegkundig specialist. Hierin worden de bijwerkingen besproken en mogelijk vindt een lichamelijk onderzoek plaats. De oncoloog of verpleegkundig specialist bepaalt hierna of de behandeling door kan gaan.  </wat>
+    <wie>Oncoloog / Verpleegkundig specialist</wie>
+    <waar>Poli oncologie, wachtgebied 4H</waar>
+    <instructies>- Vooraf medicatie innemen</instructies>
+    </station>
+  
+    <station>
+    <type>Behandeling</type>
+    <naam>Chemotherapie</naam>
+    <wat>Op de dagbehandeling oncologie krijgt u via een infuus de chemotherapie. </wat>
+    <wie>Verpleegkundige dagbehandeling</wie>
+    <waar>Dagbehandel centrum, wachtgebied 4H</waar>
+    <instructies>- 2e kuur dose dense adriamycine + cyclofosfamide</instructies>
+  </station>
+
+          <station>
+    <type>Behandeling</type>
+    <naam>Bloedafname</naam>
+    <wat>Bloedonderzoek voorafgaand aan chemotherapie is nodig om te beoordelen of de chemotherapie veilig gegeven kan worden.</wat>
+    <wie>Laborant</wie>  
+    <waar>Laboratorium, begane grond</waar>
+    <instructies>- Nuchter</instructies>
+  </station>
+
+    <station>
+    <type>Consult (gesprek met de patient)</type>
+    <naam>Consult poli</naam>
+    <wat>Voorafgaand aan elke volgende chemotherapie heeft u een consult met de oncoloog of verpleegkundig specialist. Hierin worden de bijwerkingen besproken en mogelijk vindt een lichamelijk onderzoek plaats. De oncoloog of verpleegkundig specialist bepaalt hierna of de behandeling door kan gaan.  </wat>
+    <wie>Oncoloog / Verpleegkundig specialist</wie>
+    <waar>Poli oncologie, wachtgebied 4H</waar>
+    <instructies>- Vooraf medicatie innemen</instructies>
+    </station>
+  
+    <station>
+    <type>Behandeling</type>
+    <naam>Chemotherapie</naam>
+    <wat>Op de dagbehandeling oncologie krijgt u via een infuus de chemotherapie. </wat>
+    <wie>Verpleegkundige dagbehandeling</wie>
+    <waar>Dagbehandel centrum, wachtgebied 4H</waar>
+    <instructies>- 3e kuur dose dense adriamycine + cyclofosfamide</instructies>
+  </station>
+
+          <station>
+    <type>Behandeling</type>
+    <naam>Bloedafname</naam>
+    <wat>Bloedonderzoek voorafgaand aan chemotherapie is nodig om te beoordelen of de chemotherapie veilig gegeven kan worden.</wat>
+    <wie>Laborant</wie>  
+    <waar>Laboratorium, begane grond</waar>
+    <instructies>- Nuchter</instructies>
+  </station>
+
+    <station>
+    <type>Consult (gesprek met de patient)</type>
+    <naam>Consult poli</naam>
+    <wat>Voorafgaand aan elke volgende chemotherapie heeft u een consult met de oncoloog of verpleegkundig specialist. Hierin worden de bijwerkingen besproken en mogelijk vindt een lichamelijk onderzoek plaats. De oncoloog of verpleegkundig specialist bepaalt hierna of de behandeling door kan gaan.  </wat>
+    <wie>Oncoloog / Verpleegkundig specialist</wie>
+    <waar>Poli oncologie, wachtgebied 4H</waar>
+    <instructies>- Vooraf medicatie innemen</instructies>
+    </station>
+  
+    <station>
+    <type>Behandeling</type>
+    <naam>Chemotherapie</naam>
+    <wat>Op de dagbehandeling oncologie krijgt u via een infuus de chemotherapie. </wat>
+    <wie>Verpleegkundige dagbehandeling</wie>
+    <waar>Dagbehandel centrum, wachtgebied 4H</waar>
+    <instructies>- 4e kuur dose dense adriamycine + cyclofosfamide</instructies>
+  </station>
+
+    <station>
+    <type>Behandeling</type>
+    <naam>Bloedafname</naam>
+    <wat>Bloedonderzoek voorafgaand aan chemotherapie is nodig om te beoordelen of de chemotherapie veilig gegeven kan worden.</wat>
+    <wie>Laborant</wie>  
+    <waar>Laboratorium, begane grond</waar>
+    <instructies>- Nuchter</instructies>
+  </station>
+
+    <station>
+    <type>Consult (gesprek met de patient)</type>
+    <naam>Consult poli</naam>
+    <wat>Voorafgaand aan elke volgende chemotherapie heeft u een consult met de oncoloog of verpleegkundig specialist. Hierin worden de bijwerkingen besproken en mogelijk vindt een lichamelijk onderzoek plaats. De oncoloog of verpleegkundig specialist bepaalt hierna of de behandeling door kan gaan.  </wat>
+    <wie>Oncoloog / Verpleegkundig specialist</wie>
+    <waar>Poli oncologie, wachtgebied 4H</waar>
+    <instructies>- Vooraf medicatie innemen</instructies>
+    </station?
+  
+    <station>
+    <type>Behandeling</type>
+    <naam>MRI-mammae</naam>
+    <wat>Op de dagbehandeling oncologie krijgt u via een infuus de chemotherapie. </wat>
+    <wie>Radioloog</wie>
+    <waar>Poli radiologie, wachtgebied 5H</waar>
+    <instructies>- Claustrofobie melden</instructies>
+  </station>
+  
 </metromap>
