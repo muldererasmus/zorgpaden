@@ -81,9 +81,8 @@ body {
 	  <b>Gesprek</b></font><br>
 	  <font color="blue">&nbsp &nbsp &nbsp Oncoloog</font></span>
     <ul class="nested">
-      	<li style="color:rgb(134,210,237)" class="voorleestekst">Bij het eerste gesprek met je oncoloog worden de diagnose en behandeling met je besproken. Welke chemo ga je krijgen? Hoe vaak en hoe veel? En wat zijn meest voorkomende bijwerkingen? De oncoloog zal ook een lichamelijk onderzoek doen.
-	<button type="button">Lees voor!</button>
-	</li>
+      	<li style="color:rgb(134,210,237)" class="voorleestekst">Bij het eerste gesprek met je oncoloog worden de diagnose en behandeling met je besproken. Welke chemo ga je krijgen? Hoe vaak en hoe veel? En wat zijn de meest voorkomende bijwerkingen? De oncoloog zal ook een lichamelijk onderzoek doen.</li>
+	<button type="button">Lees voor!</button>	
 	  <li style="color:rgb(117,140,241)">- vooraf bloed prikken</li>
 	  <li style="color:rgb(117,140,241)">- vooraf vragenlijst invullen</li>
 	  <li style="color:rgb(109,121,172)">Lokatie: Poli oncologie, wachtgebied 2K</li>
@@ -191,7 +190,6 @@ function myFunction(xml) {
 
 <script>
 // text to speech script
-
 const textarea = document.getElementsByClassName("voorleestekst"),
 voiceList = document.querySelector("select"),
 speechBtn = document.querySelector("button");
@@ -199,28 +197,10 @@ speechBtn = document.querySelector("button");
 let synth = speechSynthesis,
 isSpeaking = true;
 
-//voices();
-
-//function voices(){
-//    for(let voice of synth.getVoices()){
-//        let selected = voice.name === "Google US English" ? "selected" : "";
-        //let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
-        //voiceList.insertAdjacentHTML("beforeend", option);
-//    }
-//}
-
-//synth.addEventListener("voiceschanged", voices);
-
 function textToSpeech(text){
     let utterance = new SpeechSynthesisUtterance(text);
 	utterance.name = "Google Nederlands";
 	utterance.lang = "nl-NL";
-	//utterance.voice = "Google US English" ? "selected" : "";
-   // for(let voice of synth.getVoices()){
-   //     if(voice.name === voiceList.value){
-    //        utterance.voice = voice;
-     //   }
-  //  }
     synth.speak(utterance);
 }
 
@@ -231,29 +211,7 @@ speechBtn.addEventListener("click", e =>{
             textToSpeech(textarea[0].innerText);
         }
 		
-/*
-	    
-        if(textarea.innerText.length > 80){
-            setInterval(()=>{
-                if(!synth.speaking && !isSpeaking){
-                    isSpeaking = true;
-                    speechBtn.innerText = "Lees voor!";
-                }else{
-                }
-            }, 500);
-            if(isSpeaking){
-                synth.resume();
-                isSpeaking = false;
-                speechBtn.innerText = "Pause Speech";
-            }else{
-                synth.pause();
-                isSpeaking = true;
-                speechBtn.innerText = "Resume Speech";
-            }
-        }else{
-            speechBtn.innerText = "Lees voor!";
-        }
-	*/
+
     }
 });
 </script>
@@ -266,10 +224,7 @@ new google.translate.TranslateElement({
 	layout: google.translate.TranslateElement.InlineLayout.SIMPLE
   }, 'google_translate_element');
 			
-//  new google.translate.TranslateElement({
-//    pageLanguage: 'nl',
-//    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-//  }, 'google_translate_element');
+
 }
 	</script>
 </body>
