@@ -189,23 +189,24 @@ speechBtn = document.querySelector("button");
 let synth = speechSynthesis,
 isSpeaking = true;
 
-voices();
+//voices();
 
-function voices(){
-    for(let voice of synth.getVoices()){
-        let selected = voice.name === "Google US English" ? "selected" : "";
-        let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
-        voiceList.insertAdjacentHTML("beforeend", option);
-    }
-}
+//function voices(){
+//    for(let voice of synth.getVoices()){
+//        let selected = voice.name === "Google US English" ? "selected" : "";
+        //let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
+        //voiceList.insertAdjacentHTML("beforeend", option);
+//    }
+//}
 
-synth.addEventListener("voiceschanged", voices);
+//synth.addEventListener("voiceschanged", voices);
 
 function textToSpeech(text){
     let utterance = new SpeechSynthesisUtterance(text);
-    for(let voice of synth.getVoices()){
-        if(voice.name === voiceList.value){
-            utterance.voice = voice;
+	utterance.voice = "Google US English" ? "selected" : "";
+   // for(let voice of synth.getVoices()){
+   //     if(voice.name === voiceList.value){
+    //        utterance.voice = voice;
         }
     }
     synth.speak(utterance);
